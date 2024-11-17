@@ -1,0 +1,16 @@
+*{
+    margin: 0 auto;
+}
+
+
+/* Ensure the navbar has a lower z-index */
+.Pagination {
+    z-index: 1;
+}
+
+.navbar {
+    z-index: 0; /* Ensure it's above the navbar */
+}
+.Pagination{
+    margin-bottom: 10px;
+}
