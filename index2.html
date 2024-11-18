@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+       
+       .modern-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 52px;
+    font-weight: 700; /* Bold */
+    color: #333333; /* Dark Gray */
+    text-transform: uppercase;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+    
+    </style>
+</head>
+<body>
+    <!--birthday and thanksgiving section-->
+    <div class="flex flex-col md:flex-row flex-1 bg-orange-300  p-4 space-y-4 md:space-y-0 md:space-x-4 ">
+         <div class="flex-1 flex items-center justify-center"> 
+            <a href="" class="block  text-black-500 hover:text-red-700 font-bold ">Flower for Birthdays</a> 
+        </div>
+         <div class="flex-1 flex items-center justify-center">
+             <a href="" class="block text-black-500 hover:text-red-700 font-bold ">Flower for Thanksgiving</a>
+             </div> 
+</div>
+  
+    <div class="navbar bg-base-100 border-2 border-brown-600 "style="width: 100%; height: 200px;">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h7" />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li><a>Homepage</a></li>
+              <li><a>Portfolio</a></li>
+              <li><a>About</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="navbar-center">
+          <a class=" modern-logo btn-ghost text-xl">Flower Shop</a>
+        </div>
+        <div class="navbar-end">
+          <button class="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+          <button class="btn btn-ghost btn-circle">
+            <div class="indicator">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              </svg>
+              <span class="badge badge-xs badge-primary indicator-item"></span>
+            </div>
+          </button>
+          <!--adding theme controller -->
+         
+
+        </div>
+      </div>
+      <!--adding the code-->
+      <header>
+
+        <div class="flex flex-col md:flex-row flex-1   p-4 space-y-4 md:space-y-0 md:space-x-4">  
+            <!-- Image container -->
+            <div class="flex flex-1 items-center justify-center "> 
+                <img src="flower/13-1.webp" alt="Image" class="max-w-full">
+            </div>
+            
+            <!-- Input fields container -->
+     
+              <!--input field-->
+            <div class="flex flex-1 items-center justify-center space-x-2 w-full  mx-auto">
+    
+             <div>
+                <!--text-->
+                <div >
+                  <p class="py-4">same day delivery</p>
+                  <p class="py-4">Graceful garden basket</p>
+                  <p class="py-4">$80</p>
+                </div>
+                <!--input-->
+                <div class="">
+                    <input type="text" class=" p-2 w-70 " placeholder="standard $80"><span></span><span></span>
+                    <input type="text" class=" p-2 w-70" placeholder="deluxe $100">
+                </div>
+                <!--Delivery information-->
+                <div>
+                 <!--1-->
+                 <label class="form-control w-full max-w-xs">
+                    <div class="label">
+                      <span class="label-text">where would you like to send this item</span>
+                      <span class="label-text-alt"></span>
+                    </div>
+                    <input type="text" placeholder="ZIP CODE" class="input input-bordered w-full max-w-xs" />
+                    <div class="label">
+                      <span class="label-text-alt"></span>
+                      <span class="label-text-alt"></span>
+                    </div>
+                  </label>
+                  <!--2-->
+                  <label class="form-control w-full max-w-xs">
+                    <div class="label">
+                      <span class="label-text">Select a delivery date</span>
+                      <span class="label-text-alt"></span>
+                    </div>
+                    <input type="date" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                    <div class="label">
+                      <span class="label-text-alt"></span>
+                      <span class="label-text-alt"></span>
+                    </div>   
+                  </label>
+                  <button class="btn btn-active btn-accent ">ADD TO CART</button>
+                </div>
+             </div>
+            </div>
+        </div>
+    
+    
+       </header>
+    
+       <main>
+    
+        <div class="w-4/5 ml-6  bg-pink-100 p-8 ">
+         <p class="font-bold text-xl">Graceful Garden Bucket</p>
+         <p class="text-2xl">
+            <br>
+            Elegant white flowers effortlessly capture your messages of support <br> and love during the passing of a loved one. Our <br> Graceful Garden Basket is handcrafted with stock, spray roses<br> and carnations, with each bloom accented by a charming<br>
+             basket.
+         </p>
+         <br>
+         <div class="flex">
+            <div class="details flex-1">
+                <p class="font-bold text-xl">DETAILS</p>
+                <ul class="list-circle">
+                    <li>The Deluxe Basket is approximately <br>16"H x 21"W.</li>
+                    <li>Designed by florists, ready to display.</li>
+                    <li>Pet Safety Precautions: This bouquet or plant may include<br> flowers and foliage that are known to be toxic to pets. <br>To keep them safe, be sure to keep this arrangement <br>out of your pet's reach.</li>
+                </ul>
+            </div>
+            <br>
+            <div class="bloom-details flex-1">
+                <p class="font-bold text-xl">BLOOM Details</p>
+               <ul class="list-circle list-inside">
+                <li>Stock</li>
+                <li>Daisy</li>
+                <li>Unique</li>
+                <li>Carnation</li>
+               </ul>
+            </div>
+         </div>
+         <br>
+         <br>
+         <p>DELIVERY INFORMATION</p>
+        </div>
+        <br>
+        <br>
+        <br>
+    
+         <!--FooTER SECtion-->
+         <footer class="footer bg-neutral text-neutral-content grid-rows-2 p-10">
+            <p class="font-bold text-4xl">FLOWER SHOP</p>
+            <nav>
+              <h6 class="footer-title">Services</h6>
+              <a class="link link-hover">Branding</a>
+              <a class="link link-hover">Design</a>
+              <a class="link link-hover">Marketing</a>
+              <a class="link link-hover">Advertisement</a>
+            </nav>
+            <nav>
+              <h6 class="footer-title">Company</h6>
+              <a class="link link-hover">About us</a>
+              <a class="link link-hover">Contact</a>
+              <a class="link link-hover">Jobs</a>
+              <a class="link link-hover">Press kit</a>
+            </nav>
+            <nav>
+              <h6 class="footer-title">Legal</h6>
+              <a class="link link-hover">Terms of use</a>
+              <a class="link link-hover">Privacy policy</a>
+              <a class="link link-hover">Cookie policy</a>
+            </nav>
+            <nav>
+              <h6 class="footer-title">Social</h6>
+              <a class="link link-hover">Twitter</a>
+              <a class="link link-hover">Instagram</a>
+              <a class="link link-hover">Facebook</a>
+              <a class="link link-hover">Github</a>
+            </nav>
+            <nav>
+              <h6 class="footer-title">Explore</h6>
+              <a class="link link-hover">Features</a>
+              <a class="link link-hover">Enterprise</a>
+              <a class="link link-hover">Security</a>
+              <a class="link link-hover">Pricing</a>
+            </nav>
+            <nav>
+              <h6 class="footer-title">Apps</h6>
+              <a class="link link-hover">Mac</a>
+              <a class="link link-hover">Windows</a>
+              <a class="link link-hover">iPhone</a>
+              <a class="link link-hover">Android</a>
+            </nav>
+          </footer>
+       </main>
+</body>
+</html>
