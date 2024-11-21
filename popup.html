@@ -27,6 +27,21 @@
             align-items: center;
             justify-content: center;
         }
+        .flex-container {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+        .image-container, .text-container {
+            flex: 1;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .image-container img {
+            max-width: 40%;
+            height: auto;
+        }
         .close-button {
             margin-top: 20px;
             padding: 10px 20px;
@@ -49,6 +64,9 @@
                 padding: 8px 16px;
                 font-size: 14px;
             }
+            .flex-container {
+                flex-direction: row;
+            }
         }
         @media (max-width: 480px) {
             .popup-content {
@@ -65,7 +83,15 @@
 <body>
     <div class="popup-content">
         <h1>Pop-up Page</h1>
-        <p>The calculated result is: <span id="result"></span></p>
+        <div class="flex-container">
+            <div class="image-container">
+                <img src="./flower/08.jpg" alt="Placeholder Image">
+                <p>you have to pay: <span>TK</span> <span id="result"></span></p>
+            </div>
+            <div class="text-container">
+                <h3>delivery INFORMATION</h3>
+            </div>
+        </div>
         <button class="close-button" onclick="window.close()">Close</button>
     </div>
 </body>
