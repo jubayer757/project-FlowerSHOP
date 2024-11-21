@@ -116,42 +116,27 @@
              <div>
                 <!--text-->
                 <div >
-                  <p class="py-4">same day delivery</p>
-                  <p class="py-4">Graceful garden basket</p>
+                  <p class="py-4 font-bold text-xl">same day delivery</p>
+                  <p class="py-4 text-3xl">Graceful garden basket</p>
                   <p class="py-4">$80</p>
                 </div>
                 <!--input-->
                 <div class="">
-                    <input type="text" class=" p-2 w-70 " placeholder="standard $80"><span></span><span></span>
-                    <input type="text" class=" p-2 w-70" placeholder="deluxe $100">
+                    
+                
+                    <input type="number" id="inputValue" placeholder="Enter a number">
+                    <div class="result" id="result"></div>
+                    <div class="error" id="error"></div>
+                   
                 </div>
                 <!--Delivery information-->
                 <div>
                  <!--1-->
-                 <label class="form-control w-full max-w-xs">
-                    <div class="label">
-                      <span class="label-text">where would you like to send this item</span>
-                      <span class="label-text-alt"></span>
-                    </div>
-                    <input type="text" placeholder="ZIP CODE" class="input input-bordered w-full max-w-xs" />
-                    <div class="label">
-                      <span class="label-text-alt"></span>
-                      <span class="label-text-alt"></span>
-                    </div>
-                  </label>
+
                   <!--2-->
-                  <label class="form-control w-full max-w-xs">
-                    <div class="label">
-                      <span class="label-text">Select a delivery date</span>
-                      <span class="label-text-alt"></span>
-                    </div>
-                    <input type="date" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
-                    <div class="label">
-                      <span class="label-text-alt"></span>
-                      <span class="label-text-alt"></span>
-                    </div>   
-                  </label>
-                  <button class="btn btn-active btn-accent ">ADD TO CART</button>
+
+                  <button onclick="calculate() "style = margin-top: 20px; class="btn btn-ghost btn-neutral  ">Calculate</button> <br>
+                  <button onclick="openPopup()" style="margin-top: 20px;" class="btn btn-active btn-accent ">ADD TO CART</button>
                 </div>
              </div>
             </div>
@@ -244,5 +229,35 @@
             </nav>
           </footer>
        </main>
+
+       <script>
+                let calculationResult = 0;
+
+function calculate() {
+    // Get the input value
+    const inputValue = document.getElementById('inputValue').value;
+    // Clear any previous error message
+    document.getElementById('error').innerText = "";
+    // Check if the input value is smaller than 1
+    if (inputValue < 1) {
+        document.getElementById('error').innerText = "Input value must be 1 or greater.";
+        document.getElementById('result').innerText = "";
+        return;
+    }
+    // Perform a simple calculation (e.g., multiply by 2)
+    calculationResult = inputValue * 80;
+    // Display the result in the result div
+    document.getElementById('result').innerText = "Calculated Result: " + calculationResult;
+}
+
+function openPopup() {
+    // Open the popup window and pass the calculated result
+    const popup = window.open("popup.html", "Popup", "width=600,height=400");
+    // Use the result as a query parameter
+    popup.onload = function() {
+        popup.document.getElementById('result').innerText = calculationResult;
+    };
+}
+       </script>
 </body>
 </html>

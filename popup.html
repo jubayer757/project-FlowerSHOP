@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+           
+            margin: 0;
+        }
+        .popup-content {
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 100%;
+        }
+        .close-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .close-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup-content">
+        <div class="flex">
+            <div class="flex flex-1 border-brown-600">
+             <img src="./flower/01.jpg" alt="">
+            </div>
+            <div class=" flex  flex-1">
+            <p>price is 800</p>
+            </div>
+        </div>
+        <h1>Pop-up Page</h1>
+        <p>The calculated result is: <span id="result"></span></p>
+        <button class="close-button" onclick="window.close()">Close</button>
+    </div>
+</body>
+</html>
