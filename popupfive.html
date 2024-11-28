@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up Page</title>
+    <style>
+        html, body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            margin: 0;
+            width: 100%;
+        }
+        .popup-content {
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #0b090964;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 80%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .flex-container {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+        .image-container, .text-container {
+            flex: 1;
+            margin: 10px;
+            padding: 10px;
+           
+        }
+        .image-container img {
+            max-width: 40%;
+            height: auto;
+        }
+        .close-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .close-button:hover {
+            background-color: #0056b3;
+        }
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            .popup-content {
+                width: 90%;
+                height: 90%;
+            }
+            .close-button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+            .flex-container {
+                flex-direction: row;
+            }
+        }
+        @media (max-width: 480px) {
+            .popup-content {
+                width: 95%;
+                height: 95%;
+            }
+            .close-button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="popup-content">
+        <h1>CART</h1>
+        <div class="flex-container">
+            <div class="image-container">
+                <img src="flower/04.jpg" alt="Placeholder Image">
+                <p>you have to pay: <span>TK</span> <span id="result"></span></p>
+            </div>
+            <div class="text-container">
+                <h3>delivery INFORMATION</h3>
+                <input type="text"  placeholder="Address">
+                <input type="number" placeholder="number">
+                <br>
+                <button class="bg-orange-300 border-2 " >Submit</button>
+            </div>
+        </div>
+
+        <button class="close-button" onclick="window.close()">Close</button>
+    </div>
+</body>
+</html>
